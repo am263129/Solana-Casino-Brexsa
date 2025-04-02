@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Pixel Regular';
+  src: url('/fonts/pixel-regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Airstrike';
+  src: url('/fonts/airstrike.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Flama Basic';
+  src: url('/fonts/flama-basic.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: 261 13% 4%;
+  --foreground: 252 10% 80%;
+
+  --card: 261 13% 5%;
+  --card-foreground: 252 10% 80%;
+
+  --popover: 261 13% 5%;
+  --popover-foreground: 252 10% 80%;
+
+  --primary: 264 57% 57%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 271 13% 16%;
+  --secondary-foreground: 252 10% 80%;
+
+  --muted: 271 13% 16%;
+  --muted-foreground: 252 10% 60%;
+
+  --accent: 271 13% 16%;
+  --accent-foreground: 252 10% 80%;
+
+  --destructive: 0 70% 50%;
+  --destructive-foreground: 0 0% 100%;
+
+  --success: 140 42% 35%;
+  --success-foreground: 0 0% 100%;
+
+  --border: 271 13% 16%;
+  --input: 271 13% 16%;
+  --ring: 264 57% 57%;
+
+  --radius: 0.5rem;
+}
+
+body {
+  font-family: 'Flama Basic', system-ui, sans-serif;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  background-image: url('/images/bg.webp');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.airstrike-font {
+  font-family: 'Airstrike', system-ui, sans-serif;
+}
+
+.pixel-font {
+  font-family: 'Pixel Regular', monospace;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .gradient-border {
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: 0.5rem;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(107, 80, 213, 0.8));
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+}
