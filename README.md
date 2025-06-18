@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+###Solana casino game site
+![image](https://github.com/user-attachments/assets/89b8389b-4abb-4224-bf6f-3ddee475cb0f)
+![image](https://github.com/user-attachments/assets/86c5119f-c53b-4ba2-92a7-223f70581cf5)
+![image](https://github.com/user-attachments/assets/f10d0562-eb49-4cf1-93ba-ece708244ac2)
+
 
 ## Getting Started
 
